@@ -1,0 +1,39 @@
+public class Funcionario {
+
+    private String nome;
+    private double salario;
+
+    public Funcionario(String nome, double salario) {
+        this.nome = nome;
+        this.salario = salario;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public double getSalario() {
+        return salario;
+    }
+}
+
+public class CalculadoraDeSalario {
+    public double calcularSalario(Funcionario f) {
+       
+        return f.getSalario() * 1.1; 
+    }
+}
+
+public class GeradorDeRelatorio {
+    public void gerarRelatorioDeHoras(Funcionario f) {
+     
+        System.out.println("Relatório de horas para: " + f.getNome());
+    }
+}
+
+public class FuncionarioRepositorio {
+    public void salvarNoBancoDeDados(Funcionario f) {
+       
+        System.out.println("Salvando o funcionário " + f.getNome() + " no banco de dados.");
+    }
+}
